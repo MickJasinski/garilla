@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../components/style-utils'
+import '../components/fb.css'
 
 //////// Images
 import logo from '../images/logo.png'
@@ -68,6 +69,7 @@ const GarillaFB = styled.img`
 display: block;
 position: absolute;
 top: 0;
+left: 0;
 width: 40px;
 transition: .5s;
 `;
@@ -76,6 +78,9 @@ const Fb = styled.img`
     position: relative;
     width: 40px;
     z-index: 100;
+`;
+
+const Fba = styled.a`
     &:hover ${GarillaFB} {
         position: absolute;
         top: -35px;
@@ -86,9 +91,9 @@ const Header = () => (
     <HeaderWrap>
         <Menu>
             <FbWrap>
-                <a href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></a>
+                <Fba className="fbicon" href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></Fba>
                 <FbBg style={black}></FbBg>
-                <GarillaFB src={garilla} alt="Garilla Logo"/>
+                <GarillaFB className="garfb" src={garilla} alt="Garilla Logo"/>
             </FbWrap>
             <MenuList>
                 <li><MenuLink to="/">Home</MenuLink></li>
