@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby'
 import styled from "styled-components"
 
+//////// Images
 import logo from '../images/logo.png'
 import fb from '../images/facebook.svg'
 
-// Styled components
+//////// Styled components
 const HeaderWrap = styled.div`
     width: 100%;
     height: 100px;
@@ -59,4 +60,4 @@ const Header = () => (
     </HeaderWrap>
 );
 
-export default Header;
+export default Header
