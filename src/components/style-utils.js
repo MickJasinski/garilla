@@ -1,14 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,900'); 
-  body {
-    margin: 0;
-    font-family: 'Montserrat';
-  }
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,900'); 
+    body {
+        margin: 0;
+        font-family: 'Lato';
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 `; 
 
 export const Colors = {

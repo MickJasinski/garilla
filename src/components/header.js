@@ -19,7 +19,7 @@ const Logo = styled.img`
 
 const Menu = styled.div`
     height: 100px;
-    width: 500px;
+    width: 300px;
     float: left;
     display: flex;
     justify-content: center;
@@ -29,14 +29,17 @@ const Menu = styled.div`
 
 const MenuList = styled.ul`
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     width: 100%;
+    padding-inline-start: 20px;
+    list-style: none;
 `;
 
 const MenuLink  = styled(Link)`
     color: white;
+    font-size: 1.4rem;
     text-decoration: none;
-    display: 
+    padding: 10px 20px;
 `;
 
 const Fb = styled.img`
@@ -46,7 +49,7 @@ const Fb = styled.img`
 const Header = () => (
     <HeaderWrap>
         <Menu>
-            <Fb src={fb} alt="Facebook Link"/>
+            <a href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></a>
             <MenuList>
                 <li><MenuLink to="/">Home</MenuLink></li>
                 <li><MenuLink to="about">About</MenuLink></li>

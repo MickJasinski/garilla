@@ -5,10 +5,10 @@ import { GlobalStyle, Colors } from '../components/style-utils'
 import Header from '../components/header'
 
 
-const Hero  = styled.div`
+const Content  = styled.div`
   height: calc(100vh - 100px);
   width: 100vw;
-  background: ${Colors.redG};
+  background: white;
 `;
 
 
@@ -16,9 +16,9 @@ const IndexPage = () => (
   <div>
     <GlobalStyle/>
     <Header/>
-    <Hero>
+    <Content>
       
-    </Hero>
+    </Content>
     
   </div>
 )
