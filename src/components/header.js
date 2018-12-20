@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby'
-import styled from "styled-components"
+import styled from 'styled-components'
+import { colors } from '../components/style-utils'
 
 //////// Images
 import logo from '../images/logo.png'
 import fb from '../images/facebook.svg'
+import garilla from '../images/garilla-big.png'
 
 //////// Styled components
 const HeaderWrap = styled.div`
@@ -43,14 +45,51 @@ const MenuLink  = styled(Link)`
     padding: 10px 20px;
 `;
 
+// facebook
+const FbWrap = styled.div`
+    position: relative;
+`;
+
+const black = {
+    background: "black"
+};
+
+const FbBg = styled.div`
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+width: 40px;
+height: 40px;
+z-index: 10;
+`;
+
+const GarillaFB = styled.img`
+display: block;
+position: absolute;
+top: 0;
+width: 40px;
+transition: .5s;
+`;
+
 const Fb = styled.img`
+    position: relative;
     width: 40px;
+    z-index: 100;
+    &:hover ${GarillaFB} {
+        position: absolute;
+        top: -35px;
+    }
 `;
 
 const Header = () => (
     <HeaderWrap>
         <Menu>
-            <a href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></a>
+            <FbWrap>
+                <a href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></a>
+                <FbBg style={black}></FbBg>
+                <GarillaFB src={garilla} alt="Garilla Logo"/>
+            </FbWrap>
             <MenuList>
                 <li><MenuLink to="/">Home</MenuLink></li>
                 <li><MenuLink to="about">About</MenuLink></li>
