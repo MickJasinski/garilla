@@ -65,7 +65,7 @@ height: 40px;
 z-index: 10;
 `;
 
-const GarillaFB = styled.img`
+const GarillaFb = styled.img`
 display: block;
 position: absolute;
 top: 0;
@@ -81,9 +81,8 @@ const Fb = styled.img`
 `;
 
 const Fba = styled.a`
-    &:hover ${GarillaFB} {
-        position: absolute;
-        top: -35px;
+    ${GarillaFb}:hover & {
+        top: -30px;
     }
 `;
 
@@ -93,7 +92,7 @@ const Header = () => (
             <FbWrap>
                 <Fba className="fbicon" href="https://www.facebook.com/garillauk/" target="blank"><Fb src={fb} alt="Facebook Link"/></Fba>
                 <FbBg style={black}></FbBg>
-                <GarillaFB className="garfb" src={garilla} alt="Garilla Logo"/>
+                <GarillaFb className="garfb" src={garilla} alt="Garilla Logo"/>
             </FbWrap>
             <MenuList>
                 <li><MenuLink to="/">Home</MenuLink></li>
